@@ -508,12 +508,12 @@
         </p>
         <form>
           <div class="modal-form-field">
-            <label class="form-label" for="input-name">Name</label>
+            <label class="form-label" for="user-name">Name</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
-                name="input-name"
-                id="input-name"
+                name="user-name"
+                id="user-name"
                 type="text"
               />
               <svg
@@ -527,12 +527,12 @@
             </div>
           </div>
           <div class="modal-form-field">
-            <label class="form-label" for="input-phone">Phone</label>
+            <label class="form-label" for="user-phone">Phone</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
-                name="input-phone"
-                id="input-phone"
+                name="user-phone"
+                id="user-phone"
                 type="tel"
               />
               <svg
@@ -546,12 +546,12 @@
             </div>
           </div>
           <div class="modal-form-field">
-            <label class="form-label" for="input-email">Email</label>
+            <label class="form-label" for="user-email">Email</label>
             <div class="input-wrapper">
               <input
                 class="form-input"
-                name="input-mail"
-                id="input-email"
+                name="user-mail"
+                id="user-email"
                 type="email"
               />
               <svg
@@ -564,31 +564,35 @@
               </svg>
             </div>
           </div>
-          <div class="modal-form-field">
-            <label class="form-label">Comment</label>
+          <div class="modal-form-field-comment">
+            <label class="form-label" for="user-comment">Comment</label>
             <textarea
               class="form-textarea"
-              name="comment"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
-              rows="7"
             ></textarea>
           </div>
-        </form>
-        <form class="wrap-policy-form">
-          <div class="modal-policy form-label">
-            <input class="visually-hidden input-checkbox" type="checkbox" />
-            <label class="modal-policy-text">
+          <div class="modal-policy">
+            <input
+              class="visually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              value="true"
+              name="user-privacy"
+            />
+            <label class="modal-policy-text" for="user-privacy"
+              >I accept the terms and conditions of the
               <span class="checkbox-custom">
                 <svg class="checkbox-custom-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="modal-input-span">Privacy Policy</a>
+              <a href="" class="modal-input-link">Privacy Policy</a>
             </label>
           </div>
+          <button class="modal-form-send-btn">Send</button>
         </form>
-        <button class="modal-form-send-btn">Send</button>
       </div>
     </div>
   </body>
