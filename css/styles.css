@@ -497,16 +497,16 @@ a {
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #2e2f42;
+  background-color: transparent;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
-}
-.form-footer-input::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.04em;
+  color: #fff;
+}
+.form-footer-input::placeholder {
   color: #fff;
 }
 .form-footer-btn {
