@@ -51,7 +51,9 @@
       <section class="solutions">
         <div class="container">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
-          <button class="page-button" type="button">Order Service</button>
+          <button class="page-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="section">
@@ -496,9 +498,9 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="modal-form-close-btn" type="button">
+        <button class="modal-form-close-btn" type="button" data-modal-close>
           <svg class="modal-form-close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -581,13 +583,13 @@
               value="true"
               name="user-privacy"
             />
-            <label class="modal-policy-text" for="user-privacy"
-              >I accept the terms and conditions of the
+            <label class="modal-policy-text" for="user-privacy">
               <span class="checkbox-custom">
                 <svg class="checkbox-custom-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
+              I accept the terms and conditions of the
               <a href="" class="modal-input-link">Privacy Policy</a>
             </label>
           </div>
@@ -595,5 +597,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
