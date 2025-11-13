@@ -511,7 +511,8 @@ a {
 }
 .form-footer-btn {
   display: flex;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   padding: 8px 24px;
   background-color: #4d5ae5;
@@ -522,11 +523,14 @@ a {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+  min-width: 165px;
+  cursor: pointer;
 }
 .icon-subscribe {
   fill: #fff;
   width: 24px;
   height: 24px;
+  margin-left: 16px;
 }
 
 .modal-overlay {
@@ -540,18 +544,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fcfcfc;
   width: 408px;
-  max-height: 584px;
+  min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 .modal-overlay .is-open {
   opacity: 1;
@@ -571,10 +581,7 @@ a {
   color: #8e8f99;
   margin-bottom: 4px;
 }
-.modal-form {
-  position: relative;
-  margin-bottom: 16px;
-}
+
 .modal-form-close-btn {
   background-color: #e7e9fc;
   width: 24px;
@@ -585,17 +592,21 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 24px;
+  right: 24px;
+  padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-close-btn-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-close-btn:focus,
 .modal-form-close-btn:hover {
   background-color: #404bbf;
+  border: none;
 }
 .modal-form-close-btn:focus .modal-form-close-btn-icon,
 .modal-form-close-btn:hover .modal-form-close-btn-icon {
@@ -609,7 +620,6 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-top: 48px;
   margin-bottom: 16px;
 }
 .form-input {
